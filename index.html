@@ -38,7 +38,7 @@
        
    document.getElementById("btn2").addEventListener("click", (e)=>{
                        
-                       var el = document.querySelector('#entityID1');
+                       var el = document.querySelector('#entityID2');
                  
                        el.setAttribute("#parque", 'imagenes/parque360.jpg');             
    })
@@ -47,7 +47,7 @@
    
    document.getElementById("btn3").addEventListener("click", (e)=>{
                        
-                       var el = document.querySelector('#entityID1');
+                       var el = document.querySelector('#entityID3');
                  
                        el.setAttribute("#tambor", 'imagenes/tambor360.jpg');
    })
@@ -113,13 +113,19 @@
             </a-camera>
         </a-entity>
          <!--Imagen 360-->
-         <a-sky src="#reloj360">
-        </a-sky>
         <a-entity id="EntityID1">
+            <a-sky src="#reloj360">
+            </a-sky>
+        </a-entity>
+         
+        <a-entity id="EntityID2">
             <a-sky src="#parque"></a-sky>
         </a-entity>
+
+        <a-entity id="EntityID3">
+            <a-sky src="#tambor" visible="false"></a-sky> 
+        </a-entity>
         
-        <a-sky src="#tambor" visible="false"></a-sky> 
         <!--Ground
         <a-plane src="#ground" scale="40 40 1" repeat="2 2" rotation="-90 0 0">
         </a-plane>-->
