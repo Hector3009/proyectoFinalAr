@@ -104,7 +104,34 @@
             <a-sphere color="#AA0000" radius="0.25" position="0.5 1 0" stop>
             </a-sphere>
         </a-box>
+        <script>
+        
+            document.getElementById("btn1").addEventListener("click", (e)=>{
+                           var el = document.querySelector('#entityID1');
+                           el.setAttribute("obj-model", 'obj:url(logo/Log.obj);mtl:url(logo/Log.mtl)');
+                           el.setAttribute("scale",'.10 .10 .10');
+       })
+           
+       document.getElementById("btn2").addEventListener("click", (e)=>{
+                           
+                           var el = document.querySelector('#entityID1');
+                     
+                           el.setAttribute("obj-model", 'obj:url(modelhist/ForestScene.obj);mtl:url(modelhist/ForestScene.mtl)');
+                           el.setAttribute("scale",'.005 .005 .005');               
+       })
        
+       
+       
+       document.getElementById("btn3").addEventListener("click", (e)=>{
+                           
+                           var el = document.querySelector('#entityID1');
+                     
+                           el.setAttribute("obj-model", 'obj:url(model3d/LDI_ArtecEVA_Glove_color_in.obj);mtl:url(model3d/LDI_ArtecEVA_Glove_color_in.mtl)');
+                           el.setAttribute("scale",'.20 .20 .20');                  
+                         
+       })
+       
+       </script>  
     </a-scene>
 </body>
 
