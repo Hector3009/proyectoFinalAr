@@ -4,6 +4,24 @@
 <head>
     <title>Document</title>
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('play', {
+            init: function () {
+                var myEl = document.querySelector('#yellow');
+                this.el.addEventListener('click', function () {
+                    myEl.components.sound.playSound();
+                });
+            }
+        });
+        AFRAME.registerComponent('stop', {
+            init: function () {
+                var myEl = document.querySelector('#yellow');
+                this.el.addEventListener('click', function () {
+                    myEl.components.sound.stopSound();
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -23,8 +41,7 @@
         <a-plane src="#ground" scale="40 40 1" repeat="2 2" rotation="-90 0 0">
         </a-plane>
         <!--Cilindro azul-->
-        <a-cylinder color="#0088FF" height="5" position="-2 2.5 0" 
-            sound="src: #unavailable; 
+        <a-cylinder color="#0088FF" height="5" position="-2 2.5 0" sound="src: #unavailable; 
                     on: click;
                     volume:1;
                     refDistance:1;
@@ -33,10 +50,10 @@
         <!--Yellow Box with Play and Stop Controls-->
         <a-box id="yellow" color="#FFAA00" position="0.5 0.5 0.5">
             <!--Play -->
-            <a-sphere color="#00AA00" radius="0.25" position="-0.5 1 0">
+            <a-sphere color="#00AA00" radius="0.25" position="-0.5 1 0" play>
             </a-sphere>
             <!--Stop-->
-            <a-sphere color="#AA0000" radius="0.25" position="0.5 1 0">
+            <a-sphere color="#AA0000" radius="0.25" position="0.5 1 0" stop>
             </a-sphere>
         </a-box>
     </a-scene>
