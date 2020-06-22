@@ -26,16 +26,14 @@
         
         document.getElementById("btn1").addEventListener("click", (e)=>{
                        var el = document.querySelector('#entityID1');
-                       el.setAttribute("obj-model", 'obj:url(logo/Log.obj);mtl:url(logo/Log.mtl)');
-                       el.setAttribute("scale",'.10 .10 .10');
-   })
+                       el.setAttribute("#reloj360", 'imagenes/reloj360.jpg');
+                   }) 
        
    document.getElementById("btn2").addEventListener("click", (e)=>{
                        
                        var el = document.querySelector('#entityID1');
                  
-                       el.setAttribute("obj-model", 'obj:url(modelhist/ForestScene.obj);mtl:url(modelhist/ForestScene.mtl)');
-                       el.setAttribute("scale",'.005 .005 .005');               
+                       el.setAttribute("#parque", 'imagenes/parque360.jpg');             
    })
    
    
@@ -44,9 +42,7 @@
                        
                        var el = document.querySelector('#entityID1');
                  
-                       el.setAttribute("obj-model", 'obj:url(model3d/LDI_ArtecEVA_Glove_color_in.obj);mtl:url(model3d/LDI_ArtecEVA_Glove_color_in.mtl)');
-                       el.setAttribute("scale",'.20 .20 .20');                  
-                     
+                       el.setAttribute("#tambor", 'imagenes/tambor360.jpg');
    })
    
    </script> 
@@ -112,6 +108,8 @@
          <!--Imagen 360-->
          <a-sky src="#reloj360">
         </a-sky>
+        <a-sky src="#parque" visible="false"></a-sky>
+        <a-sky src="#tambor" visible="false"></a-sky> 
         <!--Ground
         <a-plane src="#ground" scale="40 40 1" repeat="2 2" rotation="-90 0 0">
         </a-plane>-->
