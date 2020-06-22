@@ -23,6 +23,13 @@
         });
     </script>
     <script>
+        function foo() {
+          let overlay = document.querySelector("#overlay")
+          overlay.setAttribute("visible", !overlay.getAttribute("visible"))
+        }
+      
+      </script>
+    <script>
         
         document.getElementById("btn1").addEventListener("click", (e)=>{
                        var el = document.querySelector('#entityID1');
@@ -87,7 +94,7 @@
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
     <button class="button" id="btn1">Reloj</button>
     <button class="button" id="btn2">Parque</button>
-    <button class="button" id="btn3">Cerro Tambor</button>
+    <button  onclick="foo()" class="button" id="btn3">Cerro Tambor</button>
 </div>
 <body>
     <a-scene>
