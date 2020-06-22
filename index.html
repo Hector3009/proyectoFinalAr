@@ -11,7 +11,7 @@
         <!--Asset Management System -->
         <a-assets>
             <img id="ground" src="imagenes/imagen.jpg">
-            <audio id="Unavailable" src="musica/Unavailable.mp3"></audio>
+            <audio id="unavailable" src="musica/Unavailable.mp3"></audio>
         </a-assets>
         <!--Camara-->
         <a-entity position="0 0 7">
@@ -24,7 +24,11 @@
         </a-plane>
         <!--Cilindro azul-->
         <a-cylinder color="#0088FF" height="5" position="-2 2.5 0" 
-            sound="src:#Unavailable; on:click">
+            sound="src: #unavailable; 
+                    on: click;
+                    volume:1;
+                    refDistance:1;
+                    rolloffFactor:1">
         </a-cylinder>
         <!--Yellow Box with Play and Stop Controls-->
         <a-box id="yellow" color="#FFAA00" position="0.5 0.5 0.5">
